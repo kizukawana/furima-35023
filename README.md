@@ -11,7 +11,7 @@
 | last_name_kanji     | string | null: false |
 | first_name_kana     | string | null: false |
 | last_name_kana      | string | null: false |
-| birthday            | string | null: false |
+| birthday            | date   | null: false |
 
 
 
@@ -19,13 +19,12 @@
 
 - has_many :items
 - has_many :information 　
-- has_one  :list
+
 
 ## items テーブル
 
 | Column              | Type   | Options     |
 | ------------------- | ------ | ----------- |
-| image               | string | null: false |
 | name                | string | null: false |
 | explanation         | string | null: false |
 | category            | integer| null: false |
@@ -65,4 +64,3 @@
 ### Association
 
 - belongs_to :item
-- belongs_to :user
