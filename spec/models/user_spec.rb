@@ -70,7 +70,6 @@ RSpec.describe User, type: :model do
      it "英語のみでは登録できない" do
       @user.password = 'aaaaaaaa'
       @user.valid?
-      binding.pry
       expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password", "Password is invalid")
     end
       it "全角では登録できない" do
@@ -92,7 +91,8 @@ RSpec.describe User, type: :model do
      it "パスワードが半角、英数混合でなければ登録できない" do
       @user.password = 'aaaaaaaa'
       @user.valid?
-      expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+      binding.pry
+      expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password", "Password is invalid")
      end
      it "名前は漢字、平仮名、カタカナ以外では登録できない" do
       @user.last_name_kanji = '123121233'
