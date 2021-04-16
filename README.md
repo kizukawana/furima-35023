@@ -32,14 +32,14 @@
 | delivery_fee_id     | integer     | null: false                    |
 | area_id             | integer     | null: false                    |
 | delivery_day_id     | integer     | null: false                    |
-| price_id            | integer     | null: false                    | 
+| price               | integer     | null: false                    | 
 | user                | references  | null: false, foreign_key: true |
 
 
 ### Association
 
 - belongs_to :user
-- has_one :lists
+- has_one :list
 ## information テーブル
 
 | Column              | Type       | Options                        |
