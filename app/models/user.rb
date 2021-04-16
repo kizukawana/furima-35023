@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :items
-  has_one_attached :image
+  has_many :lists 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }#半角英数字混合
