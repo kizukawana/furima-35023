@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to :delivery_day      #アクティブハッシュ
   #アソシエーション
   belongs_to :user
-  has_one :list
+  has_one :item_user
   has_one_attached :image
 
 #バリデーション

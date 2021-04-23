@@ -27,7 +27,7 @@
 | ------------------- | ------      | ------------------------------ |
 | name                | string      | null: false                    |
 | explanation         | text        | null: false                    |
-| category_id         | integer     | null: false                    | 
+| category_id         | integer     | null: false                    |
 | condition_id        | integer     | null: false                    |
 | delivery_fee_id     | integer     | null: false                    |
 | area_id             | integer     | null: false                    |
